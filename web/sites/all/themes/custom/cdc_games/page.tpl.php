@@ -94,12 +94,6 @@
         </div></div> <!-- /.section, /#navigation -->
     <?php endif; ?>
 
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
-
-    <?php print $messages; ?>
-
     <div id="main-wrapper"><div id="main" class="clearfix">
 
         <div id="content" class="column"><div class="section">
@@ -122,6 +116,8 @@
         <?php endif; ?>
 
       </div></div> <!-- /#main, /#main-wrapper -->
+
+    <?php print $messages; ?>
 
     <div id="footer"><div class="section">
         <?php print render($page['footer']); ?>
