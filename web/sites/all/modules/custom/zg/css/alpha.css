@@ -1,0 +1,26 @@
+.alpha .quest-group-completion {
+  color: #cfd5d1;
+  text-shadow: 0 0.15px 0 #dddfde;
+  margin-bottom: 22px;
+}
+
+.alpha a.version, .alpha .location {
+  color: #cfd5d1;
+}
+
+.alpha-only {
+  display: none;
+}
+
+body.alpha .alpha-only {
+  display: inherit;
+}
+
+.alpha .subtitle {
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-text-stroke: 0.35px rgba(0, 0, 0, 0.975);
+  color: #4d1;
+  font-family: Helvetica, Arial, "Verdana", "sans-serif";
+  text-shadow: 0 1px 0 #528009;
+}

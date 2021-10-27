@@ -1,0 +1,30 @@
+.slide-in {
+  z-index: 10; /* to position it in front of the other content */
+  overflow: hidden;
+
+  &.from-left {
+    left: 0;
+    .slide-in-content {
+      transform: translateX(-150%);
+      -webkit-transform: translateX(-150%);
+    }
+  }
+
+  &.from-right {
+    right: 0;
+    .slide-in-content {
+      transform: translateX(150%);
+      -webkit-transform: translateX(150%);
+    }
+  }
+
+  .slide-in-content {
+    transition: all 0.65s ease; /* our nice transition */
+  }
+
+  &.show .slide-in-content, .slide-in-content-now {
+    transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
+  }
+
+}
