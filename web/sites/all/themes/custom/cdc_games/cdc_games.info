@@ -1,0 +1,5 @@
+name = "CDC Games"
+description = "CheekDotCom Software Games template"
+core = 7.x
+stylesheets[all][] = style.css
+version = "7.x-0.01"

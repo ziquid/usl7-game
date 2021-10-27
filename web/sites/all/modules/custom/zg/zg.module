@@ -446,9 +446,6 @@ function zg_init() {
     }*/
 
 //    $custom_theme = 'cdc_games';
-    function zg_custom_theme() {
-      return 'cdc_games';
-    }
 
     drupal_add_css($module_path . '/css/' . $game . '.css');
     drupal_add_css($module_path . '/css/alpha.css');
@@ -524,6 +521,22 @@ function zg_init() {
       }
 
     }
+  }
+}
+
+/**
+ * Implements hook_custom_theme().
+ */
+function zg_custom_theme() {
+  $game = check_plain(arg(0));
+
+  // Pretend usl_esa is stlouis for now.
+  if ($game == 'usl_esa') {
+    $game = 'stlouis';
+  }
+
+  if (in_array($game, zg_get_game_list())) {
+    return 'cdc_games';
   }
 }
 
