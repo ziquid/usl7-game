@@ -848,7 +848,7 @@ function zg_fetch_user($force = FALSE) {
     ($ip_addr != '173.0.81.33') &&
 
     // Web users.
-    ($user->roles[4] != 'web game access') &&
+    (user_has_role(3)) &&
 
     // Identified facebook user.
     (substr($arg2, 0, 3) != 'fb=') &&
@@ -874,7 +874,7 @@ function zg_fetch_user($force = FALSE) {
   // AI player -- only allow from certain IPs.
   if (substr($arg2, 0, 3) == 'ai-') {
     if (($ip_addr != $_SERVER['SERVER_ADDR']) &&
-    ($user->roles[4] != 'web game access')) {
+    (!user_has_role(3))) {
 
       // Ai access from a different host.
       db_set_active();

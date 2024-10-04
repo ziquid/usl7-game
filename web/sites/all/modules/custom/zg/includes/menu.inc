@@ -24,14 +24,6 @@ function zg_menu() {
     'type' => MENU_CALLBACK,
   ];
 
-//  $items['%/bounce/%'] = [
-//    'title' => 'Ziquid Game Bounce',
-//    'page callback' => 'zg_bounce_callback',
-//    'page arguments' => [2],
-//    'access arguments' => ['access game content'],
-//    'type' => MENU_CALLBACK,
-//  ];
-
   $game_list = zg_get_game_list();
   foreach ($game_list as $game) {
 
@@ -588,7 +580,7 @@ function zg_homepage_callback($phone_id) {
     return drupal_access_denied();
   }
 
-  return theme('zg_homepage', $phone_id);
+  return theme('zg_homepage', ['phone_id' => $phone_id]);
 }
 
 /**

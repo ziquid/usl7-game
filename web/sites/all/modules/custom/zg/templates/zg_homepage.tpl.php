@@ -18,7 +18,7 @@
  */
 
 /* ------ CONTROLLER ------ */
-global $game, $phone_id;
+$game = zg_get_game();
 include drupal_get_path('module', 'zg') . '/includes/' . $game . '_defs.inc';
 $game_user = zg_fetch_user();
 $message = check_plain($_GET['message']);
@@ -405,4 +405,3 @@ $("#news-mayor").addClass("active");
 </script>
 <!--  <div id="personal-text">-->
 EOF;
-
